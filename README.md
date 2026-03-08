@@ -66,6 +66,7 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 - [Hashicorp Vault](#hashicorp-vault)
 - [Jenkins-Docker-AWS](#jenkins-docker-aws)
 - [Docker \& Kubernetes: The Practical Guide - 2025 Edition](#docker--kubernetes-the-practical-guide---2025-edition)
+- [Kubernetes](#kubernetes)
 - [Front 최적화](#front-최적화)
 - [기술 면접](#기술-면접)
 - [bitlibrary-개발일지](#bitlibrary-개발일지)
@@ -830,6 +831,10 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 - [Multi Container Application](CS/ETC/Docker/MultiContainerApplication.md)
 - [docker-compose](CS/ETC/Docker/Docker-compose.md)
 - [Utlity Container](CS/ETC/Docker/UtilityContainer.md)
+
+## Kubernetes
+
+- [Kubernetes 3/6 세미나 1](CS/Kubernetes/Kubernetes1.md)
 
 ---
 
