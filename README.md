@@ -6,6 +6,9 @@
 Markdown으로 학습 내용을 정리하고 있습니다.
 ```
 
+- 외우기
+  ![images](CS/images/developer.png)
+
 ## INDEX
 
 - [개발 상식](#개발-상식)
