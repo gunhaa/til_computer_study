@@ -917,7 +917,7 @@ Markdown으로 학습 내용을 정리하고 있습니다.
   - C
     - [독하게 시작하는 C 프로그래밍](https://www.inflearn.com/course/%EB%8F%85%ED%95%98%EA%B2%8C-%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94-c%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/dashboard?cid=331984)
   - 운영체제
-    - [운영체제 공룡책 강의](https://www.inflearn.com/course/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C-%EA%B3%B5%EB%A3%A1%EC%B1%85-%EC%A0%84%EA%B3%B5%EA%B0%95%EC%9D%98/dashboard?cid=326346)
+    - [주니온 교수/ 운영체제 공룡책 강의](https://www.inflearn.com/course/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C-%EA%B3%B5%EB%A3%A1%EC%B1%85-%EC%A0%84%EA%B3%B5%EA%B0%95%EC%9D%98/dashboard?cid=326346)
     - [곰책으로 쉽게 배우는 최소한의 운영체제론](https://www.inflearn.com/course/%EA%B3%B0%EC%B1%85-%EC%89%BD%EA%B2%8C-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/dashboard?cid=329679)
   - 네트워크
     - [모든 개발자를 위한 HTTP 웹 기본 지식](https://www.inflearn.com/course/http-%EC%9B%B9-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/dashboard?cid=326277)
@@ -932,7 +932,7 @@ Markdown으로 학습 내용을 정리하고 있습니다.
   - [모두를 위한 컴퓨터 과학 (CS50 2019)](https://www.boostcourse.org/cs112/joinLectures/41307)
   - [모두를 위한 파이썬 (PY4E)](https://www.boostcourse.org/cs122/joinLectures/74778)
 - 기타
-  - [KOCW - 운영체제/최린](https://www.youtube.com/playlist?list=PLL3t9Nt4HrfvGwOgy6UhLtS9iVKhlk4pk)
+  - [고려대학교 원격교육센터/ 최린 - 운영체제](https://www.youtube.com/playlist?list=PLL3t9Nt4HrfvGwOgy6UhLtS9iVKhlk4pk)
   - [어라운드 허브 스튜디오 - Webflux](https://www.youtube.com/playlist?list=PLlTylS8uB2fAv5USxQp5tTom1ibnHOdrv)
   - [널널한 개발자 - 네트워크 기초 이론](https://www.youtube.com/playlist?list=PLXvgR_grOs1BFH-TuqFsfHqbh-gpMbFoy)
   - [크래프트맨 맨탈리티 - 네트워크 기초 무료 강의](youtube.com/watch?v=dsoAkoxZ13o&pp=ygUM64Sk7Yq47JuM7YGs)
