@@ -922,7 +922,11 @@ Markdown으로 학습 내용을 정리하고 있습니다.
   - 네트워크
     - [모든 개발자를 위한 HTTP 웹 기본 지식](https://www.inflearn.com/course/http-%EC%9B%B9-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC/dashboard?cid=326277)
 - 유데미
-  - Rust
+  - [Rust : 실제 애플리케이션 구축을 통한 Rust 완벽 정복](https://www.udemy.com/course/rust-building-application/)
+  - [Linux Command Line 부트캠프: 리눅스 초보자부터 고수까지](https://www.udemy.com/course/linux-command-line-colt/)
+  - [Docker & Kubernetes : 실전 가이드](https://www.udemy.com/course/docker-kubernetes-2022/)
+  - [Typescript :기초부터 실전형 프로젝트까지 with React + NodeJS](https://www.udemy.com/course/best-typescript-21/)
+  - [랭체인 - LangChain 으로 LLM 기반 애플리케이션 개발하기](https://www.udemy.com/course/langchain-korean/)
 - 유튜브
 - KOCW
 
@@ -934,7 +938,6 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 - [Operating System Concepts](https://product.kyobobook.co.kr/detail/S000001868743)
 - [Computer Networking:A-Top-Down Approach](https://product.kyobobook.co.kr/detail/S000061694627)
 - [Git 교과서](https://product.kyobobook.co.kr/detail/S000001834368)
-- [Linux Command Line 부트캠프: 리눅스 초보자부터 고수까지](https://www.udemy.com/course/linux-command-line-colt/)
 - [널널한 개발자](https://www.youtube.com/@nullnull_not_eq_null/playlists)
 - [포프티비](https://www.youtube.com/@%ED%8F%AC%ED%94%84%ED%8B%B0%EB%B9%84/videos)
 - [자바스크립트 패턴과 테스트](https://www.yes24.com/Product/Goods/33211518)
