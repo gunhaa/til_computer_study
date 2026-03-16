@@ -927,8 +927,16 @@ Markdown으로 학습 내용을 정리하고 있습니다.
   - [Docker & Kubernetes : 실전 가이드](https://www.udemy.com/course/docker-kubernetes-2022/)
   - [Typescript :기초부터 실전형 프로젝트까지 with React + NodeJS](https://www.udemy.com/course/best-typescript-21/)
   - [랭체인 - LangChain 으로 LLM 기반 애플리케이션 개발하기](https://www.udemy.com/course/langchain-korean/)
-- 유튜브
-- KOCW
+- 네이버 부스트코스
+  - [자바로 구현하고 배우는 자료구조](https://www.boostcourse.org/cs204/joinLectures/145114)
+  - [모두를 위한 컴퓨터 과학 (CS50 2019)](https://www.boostcourse.org/cs112/joinLectures/41307)
+  - [모두를 위한 파이썬 (PY4E)](https://www.boostcourse.org/cs122/joinLectures/74778)
+- 기타
+  - [KOCW - 운영체제/최린](https://www.youtube.com/playlist?list=PLL3t9Nt4HrfvGwOgy6UhLtS9iVKhlk4pk)
+  - [어라운드 허브 스튜디오 - Webflux](https://www.youtube.com/playlist?list=PLlTylS8uB2fAv5USxQp5tTom1ibnHOdrv)
+  - [널널한 개발자 - 네트워크 기초 이론](https://www.youtube.com/playlist?list=PLXvgR_grOs1BFH-TuqFsfHqbh-gpMbFoy)
+  - [크래프트맨 맨탈리티 - 네트워크 기초 무료 강의](youtube.com/watch?v=dsoAkoxZ13o&pp=ygUM64Sk7Yq47JuM7YGs)
+
 
 ---
 
