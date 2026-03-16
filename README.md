@@ -936,6 +936,8 @@ Markdown으로 학습 내용을 정리하고 있습니다.
   - [어라운드 허브 스튜디오 - Webflux](https://www.youtube.com/playlist?list=PLlTylS8uB2fAv5USxQp5tTom1ibnHOdrv)
   - [널널한 개발자 - 네트워크 기초 이론](https://www.youtube.com/playlist?list=PLXvgR_grOs1BFH-TuqFsfHqbh-gpMbFoy)
   - [크래프트맨 맨탈리티 - 네트워크 기초 무료 강의](youtube.com/watch?v=dsoAkoxZ13o&pp=ygUM64Sk7Yq47JuM7YGs)
+  - [김남규 교수 - 10_데이터베이스실무](https://www.youtube.com/playlist?list=PLg_wJlcMiuKtGdlIaAZ0rOPPQuTDENnEQ)
+  - [포항공대 차세대 통신 및 네트워크 강의모음 - (학부 24-1) 통신 및 네트워크 개론](https://www.youtube.com/playlist?list=PL2fxOURY4wI4U438r2j1u0M6L5bxJ67Pi)
 
 
 ---
