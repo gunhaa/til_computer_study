@@ -789,6 +789,7 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 - [Comsumer](CS/Kong/Consumer.md)
 - [Route/Service](Cs/Kong/Route.md)
 - [Kong Docker Setting](CS/Kong/Setting.md)
+- [주요 entity](CS/Kong/Entity.md)
 
 ---
 
