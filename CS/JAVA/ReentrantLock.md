@@ -9,3 +9,10 @@
 - 즉, 요약하자면 Lock은
   1. CPU의 예측(Branch/Prefetch)을 완전히 빗나가게 만들기에 Warm up 데이터인 L1/L2캐시가 초기화된다
   2. Kernel mode에 신호를 보내 Thread를 sleep시키는 비용이 큰 연산을 추가로 하게 만든다
+
+## ReentrantLock의 fair/unfair모드
+
+- fair모드와 unfair모드의 차이는 AQS에 넣기 전에 가져가는 것을 허가하는가, 허가하지 않는가의 차이이다
+  - unfair모드에서는 락을 걸때 락을 확인하고 CAS를 시도하기에 더 빠를 수 있다
+  - fair모드에서는 락을 걸때 락을 확인하지 않고 바로 Queue로 넣는다
+    - 더 빠를수 있는 상황에서도 Queue에 넣는 것이 선행되기(hasQueuedPredecessors로 계산 후 add한다)에 성능차이가 발생한다
