@@ -918,6 +918,8 @@ Markdown으로 학습 내용을 정리하고 있습니다.
     - [김영한의 실전 데이터베이스 - 설계 1편, 현대적 데이터 모델링 완전 정복](https://www.inflearn.com/course/%EA%B9%80%EC%98%81%ED%95%9C-%EC%8B%A4%EC%A0%84-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4-%EC%84%A4%EA%B3%841%ED%8E%B8/dashboard?cid=338886)
   - C
     - [독하게 시작하는 C 프로그래밍](https://www.inflearn.com/course/%EB%8F%85%ED%95%98%EA%B2%8C-%EC%8B%9C%EC%9E%91%ED%95%98%EB%8A%94-c%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/dashboard?cid=331984)
+  - C++
+    - [[C++과 언리얼로 만드는 MMORPG 게임 개발 시리즈] Part1: C++ 프로그래밍 입문](https://www.inflearn.com/course/%EC%96%B8%EB%A6%AC%EC%96%BC-3d-mmorpg-1/dashboard?cid=326162)
   - 운영체제
     - [주니온 교수/ 운영체제 공룡책 강의](https://www.inflearn.com/course/%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C-%EA%B3%B5%EB%A3%A1%EC%B1%85-%EC%A0%84%EA%B3%B5%EA%B0%95%EC%9D%98/dashboard?cid=326346)
     - [곰책으로 쉽게 배우는 최소한의 운영체제론](https://www.inflearn.com/course/%EA%B3%B0%EC%B1%85-%EC%89%BD%EA%B2%8C-%EB%B0%B0%EC%9A%B0%EB%8A%94-%EC%9A%B4%EC%98%81%EC%B2%B4%EC%A0%9C/dashboard?cid=329679)
