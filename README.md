@@ -867,8 +867,6 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 - [기술면접](CS/Interview/TechInterview.md)
   - 분야별 질문&답변
     - [CS](CS/Interview/CS.md)
-    - [Java/Javascript]
-    - [Database]
 
 ---
 
@@ -973,7 +971,6 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 - [리팩터링](https://product.kyobobook.co.kr/detail/S000001810241)
 - [(자바 ORM 표준) JPA 프로그래밍](https://product.kyobobook.co.kr/detail/S000000935744)
 - [gunhaa velog 정리자료](https://velog.io/@gunhaa/posts)
-- [gunhaa notion 정리자료](https://www.notion.so/STUDY-115dc75178eb80e2a9e2c9d12dd52d62)
 - [클린 아키텍쳐](https://www.yes24.com/Product/Goods/77283734)
 - [Real MySQL8.0](https://www.yes24.com/Product/Goods/103415627)
 - [Street Coder](https://www.yes24.com/Product/Goods/122109104)
