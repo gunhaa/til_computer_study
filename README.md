@@ -413,6 +413,12 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 - [Full Text Search](CS/MySQL/FullTextSearch.md)
   - [Inverted Index](CS/MySQL/InvertedIndex.md)
 
+--- 
+
+### Query Tuning
+
+- [Predicate Pushdown](CS/QueryTuning/PredicatePushdown.md)
+
 ---
 
 ### Redis
