@@ -795,7 +795,8 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 ## Kong Gateway
 
 - [핵심 Entity](CS/Kong/Entity.md)
-- [(Core)Kong Engine의 동작/Enterprise](CS/Kong/Engine.md)
+- [Kong Engine의 동작/Enterprise](CS/Kong/Engine.md)
+- [Kong Debug](CS/Kong/Debug.md)
 - [Kong Gateway](CS/Kong/Gateway.md)
 - [AdminAPI](CS/Kong/AdminAPI.md)
 - [Comsumer](CS/Kong/Consumer.md)
