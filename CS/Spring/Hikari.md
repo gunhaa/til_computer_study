@@ -9,6 +9,68 @@
 
 ## HikariCP의 최적화들
 
+```java
+   /**
+    * The method will borrow a BagEntry from the bag, blocking for the
+    * specified timeout if none are available.
+    *
+    * @param timeout how long to wait before giving up, in units of unit
+    * @param timeUnit a <code>TimeUnit</code> determining how to interpret the timeout parameter
+    * @return a borrowed instance from the bag or null if a timeout occurs
+    * @throws InterruptedException if interrupted while waiting
+    */
+   public T borrow(long timeout, final TimeUnit timeUnit) throws InterruptedException
+   {
+      // ThreadLocal 캐시에서 사용한 커넥션 탐색
+      // Try the thread-local list first
+      final var list = threadLocalList.get();
+      for (var i = list.size() - 1; i >= 0; i--) {
+         final var entry = list.remove(i);
+         @SuppressWarnings("unchecked")
+         final T bagEntry = useWeakThreadLocals ? ((WeakReference<T>) entry).get() : (T) entry;
+         if (bagEntry != null && bagEntry.compareAndSet(STATE_NOT_IN_USE, STATE_IN_USE)) {
+            return bagEntry;
+         }
+      }
+
+      // sharedList에서 사용 가능 커넥션 탐색
+      // Otherwise, scan the shared list ... then poll the handoff queue
+      final var waiting = waiters.incrementAndGet();
+      try {
+         for (T bagEntry : sharedList) {
+            if (bagEntry.compareAndSet(STATE_NOT_IN_USE, STATE_IN_USE)) {
+               // 대기자가 더 있다면 busy로 판단하고 추가 커넥션 생성 요청
+               // If we may have stolen another waiter's connection, request another bag add.
+               if (waiting > 1) {
+                  listener.addBagItem(waiting - 1);
+               }
+               return bagEntry;
+            }
+         }
+
+         listener.addBagItem(waiting);
+
+         timeout = timeUnit.toNanos(timeout);
+         do {
+            final var start = currentTime();
+            // SynchronousQueue<T> handoffQueue 에서 즉시 요청
+            // 락의 경합을 피하고 cpu cache, context switching을 위하여
+            final T bagEntry = handoffQueue.poll(timeout, NANOSECONDS);
+            if (bagEntry == null || bagEntry.compareAndSet(STATE_NOT_IN_USE, STATE_IN_USE)) {
+               return bagEntry;
+            }
+
+            timeout -= elapsedNanos(start);
+         } while (timeout > 10_000);
+
+         return null;
+      }
+      finally {
+         waiters.decrementAndGet();
+      }
+   }
+```
+
 ### ThreadLocal을 이용한 Lock-Free 방식의 최적화
 
 - `HikariPool`의 필드인 `ConcurrentBag<PoolEntry> connectionBag`필드를 이용한다
@@ -17,6 +79,12 @@
   - `connectionBag`에서 사용 가능한 Connection을 찾을 수 없다면 `CopyOnWriteArrayList<T> sharedList`를 사용해 `threadLocalList`필드에서 사용가능한 Connection이 없을 경우 현재 사용가능한 Connection을 찾는다
   - 사용한 Connection의 참조를 ThreadLocal에 넣어놓는 방식으로 Connection선택시 가장 많은 비용을 치루는 Lock의 경합을 회피한다
 
+### ConcurrentBag의 'Hand-off' 메커니즘
+
+- threadLocalList와 sharedList에서도 사용 가능한 커넥션을 찾지 못했을 때의 전략
+- `handOffQueue` (SynchronousQueue): 다른 스레드가 커넥션을 반납하기를 기다리는 지점
+- 단순 대기가 아니라, 반납하는 스레드가 대기 중인 스레드에게 직접 커넥션을 넘겨주는(Hand-off) 방식을 취해 불필요한 컨텍스트 스위칭을 줄인다
+
 ### 클래스의 필드 값 복사
 
 - 클래스의 필드값을 복사해 JVM의 최적화를 돕는다
@@ -24,3 +92,16 @@
   - 필드의 값을 final로 복사해 사용할 경우 Compiler는 값의 불변의 인식이 쉬워져 인라인화를 시도한다
     - 해당 메서드 스택 프레임 안에서만 존재하며, 값이 고정됨이 확실해진다. 즉 컴파일러는 이 값을 CPU 레지스터에 직접 올려두고 재사용할 수 있으며, 값이 변하지 않으니 이 값을 사용하는 메서드 호출 등을 인라인화할 수 있다
   - 알면 쓸모가 많은 최적화 방식 중 하나이다
+
+### FastList
+
+- ArrayList의 오버헤드 제거
+- HikariCP는 자바 표준 ArrayList를 쓰지 않고 자체 구현한 FastList를 사용
+  - 인덱스 체크 생략: ArrayList는 get(int index) 호출 시 매번 범위 체크를 하지만, FastList는 이를 생략
+  - 삭제 최적화: JDBC의 특성상 Statement나 ResultSet은 최근에 열린 순서대로 닫히는 경우가 많아 FastList는 요소를 삭제할 때 끝에서부터 스캔하여 삭제
+
+### Statement Caching
+
+- 많은 커넥션 풀이 자체적으로 PreparedStatement 캐싱 기능을 제공하지만, HikariCP는 이를 생략
+  - 이유: 현대의 고성능 DB 드라이버(PostgreSQL, MySQL 등)가 이미 드라이버 레벨에서 더 효율적인 캐싱을 제공하기 때문
+- JAVA 계층에서의 중복 캐싱을 제거해 메모리 점유율을 낮추고 코드 복잡도를 줄였다
