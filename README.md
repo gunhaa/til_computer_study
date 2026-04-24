@@ -586,6 +586,7 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 ### Spring
 
 - [@Transactional 롤백 정책](CS/Spring/Transactional.md)
+- [Spring Transaction의 동작](CS/Spring/Transaction.md)
 - [Hikari Connection Pool](CS/Spring/Hikari.md)
   - [(Hikari)DataSource](CS/Spring/DataSource.md)
 

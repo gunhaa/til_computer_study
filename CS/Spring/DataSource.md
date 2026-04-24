@@ -2,7 +2,9 @@
 
 - DataSource는 Connection을 획득하기 위한 팩토리 인터페이스이다
   - 이전에는 DriverManager를 통해 직접 연결을 생성했다(`DriverManger.getConnection()`)
-
+  - Connection은 실제 DB와의 물리적인 연결을 추상화한 인터페이스이다
+    - 내부 구현은 NativeSocket을 이용한 연결로 구현되어있다
+    
 ## HikariDataSource
 
 ![image1](images/hikariDatasource.png)
