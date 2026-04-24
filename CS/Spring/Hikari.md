@@ -1,4 +1,4 @@
-# Hikari Connection Pool
+# Hikari Connection Pool(bitcopark 26_4_25)
 
 > Hikari Connection Pool은 스프링이 채택하고 있는 JDBC전용 커넥션 풀이다
 
@@ -10,6 +10,10 @@
 ## HikariCP의 최적화들
 
 ```java
+
+public class ConcurrentBag<T extends IConcurrentBagEntry> implements AutoCloseable {
+    // ..
+
    /**
     * The method will borrow a BagEntry from the bag, blocking for the
     * specified timeout if none are available.
@@ -74,12 +78,15 @@
 ### ThreadLocal을 이용한 Lock-Free 방식의 최적화
 
 - `HikariPool`의 필드인 `ConcurrentBag<PoolEntry> connectionBag`필드를 이용한다
+  - PoolEntry: 실제 물리적인 JDBC Connection과 그 상태(사용 중, 대기 중 등)를 담고 있는 래퍼 객체이다
+  - ConcurrencyBag: HikariCP의 전용 저장소이며, Lock-free 기법을 활용하여 여러 스레드가 동시에 커넥션을 요청할 때 경합을 최소화하도록 설계된 고성능 컬렉션
 - `ConcurrencyBag`클래스의 `ThreadLocal<List<Object>> threadLocalList`를 사용해 이전에 사용된 스레드를 캐싱한다
   - 이 리스트를 역으로 순회하면서 기록된 최신 순으로 사용했던 Connection의 상태를 조사해 사용 가능한 Connection이 있으면 바로 사용한다
   - `connectionBag`에서 사용 가능한 Connection을 찾을 수 없다면 `CopyOnWriteArrayList<T> sharedList`를 사용해 `threadLocalList`필드에서 사용가능한 Connection이 없을 경우 현재 사용가능한 Connection을 찾는다
   - 사용한 Connection의 참조를 ThreadLocal에 넣어놓는 방식으로 Connection선택시 가장 많은 비용을 치루는 Lock의 경합을 회피한다
 
-### ConcurrentBag의 'Hand-off' 메커니즘
+
+### ConcurrentBag의 Hand-off
 
 - threadLocalList와 sharedList에서도 사용 가능한 커넥션을 찾지 못했을 때의 전략
 - `handOffQueue` (SynchronousQueue): 다른 스레드가 커넥션을 반납하기를 기다리는 지점

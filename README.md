@@ -587,6 +587,7 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 
 - [@Transactional 롤백 정책](CS/Spring/Transactional.md)
 - [Hikari Connection Pool](CS/Spring/Hikari.md)
+  - [(Hikari)DataSource](CS/Spring/DataSource.md)
 
 ### JPA
 
