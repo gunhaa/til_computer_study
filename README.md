@@ -112,6 +112,7 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 - [sync,async,blocking,non-blocking](CS/CommonSense/SyncAsyncBlockingNonBlocking.md)
 - [대칭키, 비대칭키](CS/CommonSense/Symetrickey.md)
 - [공변, 불공변](CS/CommonSense/Covariant.md)
+- [리눅스 파일시스템](CS/CommonSense/LinuxFileSystem.md)
 
 ---
 

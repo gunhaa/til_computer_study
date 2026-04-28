@@ -12,7 +12,7 @@
   - index 파일은 Staging Area의 정보를 저장
 - Tag/Commit/Tree/Blob 4가지 핵심 객체로 구성 되어있다
 - 각 파일의 전체를 저장하며, 이전의 VCS들과 달리 스냅샷을 저장한다
-- Linux 파일 시스템 inode - dentree구조와 비슷하다
+- Linux 파일 시스템 inode - dentry구조와 비슷하다
 
 ## Tag
 
@@ -34,7 +34,7 @@
 - Tree/Blob 객체를 Composition 관계로 소유하고 있다
 - Tree/Blob의 recursive하게 표현 가능하다
 - Directory를 표현하는 객체이며, 내부에 Blob 객체를 가지고 있을 수 있다
-- Blob을 인덱싱하며 dentree와 비슷한 인덱싱 구조를 가지고있다
+- Blob을 인덱싱하며 dentry와 비슷한 인덱싱 구조를 가지고있다
   - 관리하는 파일명을 가지고 있다
 - 소유 키 값
   - Tree의 Key
