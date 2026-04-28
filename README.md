@@ -124,6 +124,7 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 
 ### GITHUB
 
+- [GIT의 내부구조](CS/GIT/Internal.md)
 - [git이란?](CS/GIT/GIT.md)
 - [git의 구조](CS/GIT/Structure.md)
 - [HEAD/Snapshot](CS/GIT/Head.md)

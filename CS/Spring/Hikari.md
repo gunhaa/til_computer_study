@@ -110,5 +110,25 @@ public class ConcurrentBag<T extends IConcurrentBagEntry> implements AutoCloseab
 ### Statement Caching
 
 - 많은 커넥션 풀이 자체적으로 PreparedStatement 캐싱 기능을 제공하지만, HikariCP는 이를 생략
-  - 이유: 현대의 고성능 DB 드라이버(PostgreSQL, MySQL 등)가 이미 드라이버 레벨에서 더 효율적인 캐싱을 제공하기 때문
-- JAVA 계층에서의 중복 캐싱을 제거해 메모리 점유율을 낮추고 코드 복잡도를 줄였다
+  - 이유: 현대의 JDBC Driver(PostgreSQL, MySQL 등)가 이미 드라이버 레벨에서 더 효율적인 캐싱을 제공하기 때문
+  - JAVA 계층에서의 중복 캐싱을 제거해 메모리 점유율을 낮추고 코드 복잡도를 줄였다
+
+### 권장 설정
+
+> https://github.com/brettwooldridge/HikariCP/wiki/MySQL-Configuration
+
+```plaintext
+jdbcUrl=jdbc:mysql://localhost:3306/simpsons
+username=test
+password=test
+dataSource.cachePrepStmts=true
+dataSource.prepStmtCacheSize=250
+dataSource.prepStmtCacheSqlLimit=2048
+dataSource.useServerPrepStmts=true
+dataSource.useLocalSessionState=true
+dataSource.rewriteBatchedStatements=true
+dataSource.cacheResultSetMetadata=true
+dataSource.cacheServerConfiguration=true
+dataSource.elideSetAutoCommits=true
+dataSource.maintainTimeStats=false
+```
