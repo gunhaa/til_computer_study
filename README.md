@@ -14,6 +14,8 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 - [개발 상식](#개발-상식)
   - [WebRTC](#webrtc)
   - [GITHUB](#github)
+- [AI](#ai)
+  - [LLM](#llm-바닥부터-만들기)
 - [아키텍쳐](#아키텍쳐)
   - [대규모 아키텍쳐 설계](#대규모-아키텍쳐-설계)
 - [운영체제](#운영체제)
@@ -132,6 +134,18 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 - [Stash](CS/GIT/Stash.md)
 - [Merge](CS/GIT/Merge.md)
 - [linux-ssh인증](CS/GIT/Linux-SSH.md)
+
+---
+
+## AI
+
+---
+
+### LLM 바닥부터 만들기
+
+> https://www.honglab.ai/courses/llmpt1
+
+- [LLM의 발전과정](CS/LLM/History.md)
 
 ---
 
