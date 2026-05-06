@@ -42,6 +42,7 @@ Markdown으로 학습 내용을 정리하고 있습니다.
   - [Redis](#redis)
   - [SQLP](#sqlp)
     - [친절한 SQL 튜닝](#친절한-sql-튜닝)
+- [Deep Dive](#deep-dive)
 - [멀티스레드와 동시성](#멀티스레드와-동시성)
   - [동시성 프로그래밍](#동시성-프로그래밍)
 - [Interpreter](#interpreter)
@@ -143,7 +144,7 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 
 ### N-gram
 
-> LLM 바닥부터 만들기: https://www.honglab.ai/courses/llmpt1
+> LLM 바닥부터 만들기1: https://www.honglab.ai/courses/llmpt1
 
 - [LLM의 발전과정](CS/LLM/History.md)
 - [N-gram 언어 모델](CS/LLM/Ngram.md)
@@ -463,6 +464,14 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 - [4. 조인 튜닝](CS/SQLP/FriendlyTuning/JoinTuning.md)
 - [5. 소트 튜닝]
 - [6. DML 튜닝](CS/SQLP/FriendlyTuning/DMLTuning.md)
+
+---
+
+## Deep dive
+
+> https://www.youtube.com/playlist?list=PL5q3E8eRUieUHnsz0rh0W6AzwdVJBwEK6
+
+- [Distribution Transaction](CS/DeepDive/DistributionTransaction.md)
 
 ---
 
