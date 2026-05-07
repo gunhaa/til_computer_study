@@ -472,6 +472,7 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 > https://www.youtube.com/playlist?list=PL5q3E8eRUieUHnsz0rh0W6AzwdVJBwEK6
 
 - [Distribution Transaction](CS/DeepDive/DistributionTransaction.md)
+  - [SpringBoot DistributionLock](CS/DeepDive/SpringBootDistributionLock.md)
 
 ---
 
