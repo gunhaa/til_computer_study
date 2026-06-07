@@ -14,6 +14,7 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 - [개발 상식](#개발-상식)
   - [WebRTC](#webrtc)
   - [GITHUB](#github)
+  - [컴퓨터 과학 관련 책](#컴퓨터-밑바닥의-비밀)
 - [AI](#ai)
   - [LLM](#n-gram)
 - [아키텍쳐](#아키텍쳐)
@@ -135,6 +136,14 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 - [Stash](CS/GIT/Stash.md)
 - [Merge](CS/GIT/Merge.md)
 - [linux-ssh인증](CS/GIT/Linux-SSH.md)
+
+---
+
+### 컴퓨터 밑바닥의 비밀
+
+> https://www.yes24.com/product/goods/125299750
+
+- [프로그래밍 언어부터 프로그램 실행까지, 이렇게 진행된다](CS/UnderlyingComputer/LanguageToExecute.md)
 
 ---
 
