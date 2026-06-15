@@ -44,6 +44,7 @@ Markdown으로 학습 내용을 정리하고 있습니다.
   - [SQLP](#sqlp)
     - [친절한 SQL 튜닝](#친절한-sql-튜닝)
 - [Deep Dive](#deep-dive)
+- [Case Analysis](#case-analysis)
 - [멀티스레드와 동시성](#멀티스레드와-동시성)
   - [동시성 프로그래밍](#동시성-프로그래밍)
 - [Interpreter](#interpreter)
@@ -497,6 +498,14 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 - [Distribution Transaction](CS/DeepDive/DistributionTransaction.md)
   - [SpringBoot DistributionLock](CS/DeepDive/SpringBootDistributionLock.md)
   - [Lettuce vs Redisson](CS/DeepDive/Redisson.md)
+
+---
+
+## Case Analysis
+
+> 시스템 사례 분석 정리
+
+- [How Instagram Scaled Postgres to 2 Billion Users](CS/CaseAnalysis/Instagram.md)
 
 ---
 
