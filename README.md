@@ -79,6 +79,7 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 - [Kubernetes](#kubernetes)
 - [Front 최적화](#front-최적화)
 - [기술 면접](#기술-면접)
+- [Retrospective](#Retrospective)
 - [bitlibrary-개발일지](#bitlibrary-개발일지)
 - [정보처리기사 실기](#정보처리기사-실기)
 - [참고 강의](#참고강의)
@@ -941,6 +942,12 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 - [기술면접](CS/Interview/TechInterview.md)
   - 분야별 질문&답변
     - [CS](CS/Interview/CS.md)
+
+---
+
+## Retrospective
+
+- [260617](CS/Retrospective/260617.md)
 
 ---
 
