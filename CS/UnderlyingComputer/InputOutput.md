@@ -52,7 +52,7 @@
 
 ### 입출력 다중화
 
-- 기본적으로 file을 다루는 함수는 동기적, 블로킹 입출력이다
+- file을 다루는 함수는 동기적, 블로킹 입출력이다
 - 이를 극복하기 위해 입출력 다중화(I/O multiplexing)이 사용된다
 - I/O multiplexing은 다음과 같은 과정을 의미한다
   1. file descriptor를 획득한다
@@ -61,3 +61,14 @@
 - 위 방식은 현대 async/event-driven architecture의 핵심 근간이 된다
   - 하부 구조 (OS & 런타임): 이 I/O multiplexing 기반으로 대규모 요청을 대기 없이 처리하는 event loop 엔진(e.g., nodejs의 libuv, java의 Netty 등)이 돌아간다
   - 상부 구조 (프로그래머가 쓰는 추상화 도구): event loop 위에서 개발자가 동기식 코드처럼 편하게 비동기를 제어할 수 있도록 제공되는 스펙이 바로 Promise(Node.js), Publisher/Subscriber(WebFlux), Coroutine(Kotlin)이다
+
+### mmap
+
+- file을 다루는 함수는 동기적, 블로킹 입출력이다
+- read()의 동작은 커널의 특정 영역(buffer)에 데이터를 가지고 온 뒤, user가 요청한 메모리 영역에 kernel buffer의 데이터를 복사해서 전달한다
+  - 결국 파일을 한번 read()하기 위해 두 번의 복사가 일어나는 문제가 발생한다
+- 이를 해결하기 위한 system call이 mmap이다
+  - mmap는 메모리의 특정 영역과 disk의 영역을 같이 사용한다(kernel에서 유저 영역으로의 '추가 복사'를 하지 않고 kernel의 메모리 영역을 사용할 수 있게 해준다, 이를 zero-copy라고 한다)
+  - os scheduling 상태에 따라 disk의 원본 파일과 동기화 시킨다
+  - flush()를 사용해 강제로 동기화 시키는 방법도 있다(성능 상 문제 생김)
+    - java에서는 flush()이고, 정확한 system call은 msync이다
