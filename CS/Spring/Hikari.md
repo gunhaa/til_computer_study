@@ -137,9 +137,9 @@ public final PreparedStatement prepareStatement(String sql, String[] columnNames
 
 ### CPU의 캐시 라인 무효화 제어
 
-- OS 스케줄러가 스레드에 할당한 CPU 실행 시간(Time Slice / Execution Quanta) 내에 HikariCP의 동작이 모두 처리되지 않는다면 이후 작업에 필요한 정보가 L1,L2 캐시에 남아있지 않을 가능성이 높아진다
+- OS Scheduler가 thread에 할당한 CPU 실행 시간(Time Slice / Execution Quanta) 내에 HikariCP의 동작이 모두 처리되지 않는다면 이후 작업에 필요한 정보가 L1,L2 캐시에 남아있지 않을 가능성이 높아진다
   - 이를 해결하기 위해 바이트코드를 최대한 압축해 OS Scheduler의 타임 슬라이스(Execution Quanta)내에서 실행되도록 최적화 했다
-  - JIT 컴파일러의 메서드 인라인화 조건(바이트 코드 35바이트 이하)으로 압축해 JIT의 인라인화를 유도했다
+  - 이를 위해 JIT 컴파일러의 메서드 인라인화 조건(바이트 코드 35바이트 이하)으로 압축해 JIT의 인라인화를 유도했다
   1. 메서드 내부에서 try-catch 블록마저 별도의 헬퍼 메서드로 쪼개서 밖으로 던졌다
   2. 문자열 더하기 연산이나 로깅 로그를 핵심 로직에서 완전히 배제헀다
   ```java

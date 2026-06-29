@@ -150,6 +150,7 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 - [Chapter2. 프로그램이 실행되었지만, 뭐 뭔 하도 모르겠다](CS/UnderlyingComputer/ProgramExecute.md)
 - [Chapter4. 트랜지스터에서 CPU로, 이보다 더 중요한 것은 없다](CS/UnderlyingComputer/Cpu.md)
 - [Chapter5. 작은 것으로 큰 성과 이루기, 캐시](CS/UnderlyingComputer/Cache.md)
+- [Chapter6. 입출력이 없는 컴퓨터가 있을까?](CS/UnderlyingComputer/InputOutput.md)
 
 ---
 
