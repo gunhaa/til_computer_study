@@ -82,6 +82,7 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 - [기술 면접](#기술-면접)
 - [Retrospective](#Retrospective)
 - [bitlibrary-개발일지](#bitlibrary-개발일지)
+- [Local Cluster](#local-cluster-SOP)
 - [정보처리기사 실기](#정보처리기사-실기)
 - [참고 강의](#참고강의)
 - [참고 자료](#참고자료)
@@ -975,6 +976,12 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 - [CI&CD 계획](CS/Bitlibrary/CI&CD.md)
 - [결과](CS/Bitlibrary/results.md)
 - [Certbot을 이용한 인증서 재 갱신](CS/Bitlibrary/Certbot.md)
+
+---
+
+## Local Cluster SOP
+
+- [N100 Ubuntu 설치 SOP](CS/LocalCluster/ubuntu.md)
 
 ---
 
