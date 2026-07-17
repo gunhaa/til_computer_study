@@ -1093,3 +1093,5 @@ Markdown으로 학습 내용을 정리하고 있습니다.
 - [스프링으로 시작하는 리액티브 프로그래밍 Spring WebFlux를 이용한 Non-Blocking 애플리케이션 구현](https://www.yes24.com/product/goods/118202569)
 - [객체 지향의 사실과 오해](https://product.kyobobook.co.kr/detail/S000001628109)
 - [동시성 프로그래밍](https://www.yes24.com/Product/Goods/108570426?pid=123487&cosemkid=go16534433513533699)
+- [가상 면접 사례로 배우는 대규모 시스템 설계 기초](https://product.kyobobook.co.kr/detail/S000001033116)
+- [컴퓨터 밑바닥의 비밀](https://product.kyobobook.co.kr/detail/S000212650856)

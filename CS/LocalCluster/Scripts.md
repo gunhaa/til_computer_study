@@ -14,7 +14,7 @@ rm get-docker.sh
 # 3. 최신 Docker Compose V2 플러그인 확실하게 추가 설치
 sudo apt install -y docker-compose-plugin
 
-# 4. 현재 사용자($USER)에게 도커 권한 부여
+# 4. 현재 사용자에게 도커 권한 부여
 sudo usermod -aG docker $USER
 
 # 5. 변경된 권한을 터미널 세션에 즉시 적용
